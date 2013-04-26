@@ -1,18 +1,16 @@
-#include <iostream>
 #include "VirtualFunction.h"
-
-void Student::show()
+// class function implement
+void Student::Saysomething()
 {
     std::cout<<"I am a Student!\n";
 }
 
-void Fred::show()
+void Fred::Saysomething()
 {
-    std::cout<<"I am Fred!\n"<<;
+    std::cout<<"I am Fred!\n";
 }
 
-void Fred_copy::show()
+void Jack::Saysomething()
 {
-    std::cout<<"I am Fred, too!\n";
+    std::cout<<"I am Jack!\n";
 }
-
