@@ -1,0 +1,8 @@
+# vim cache file
+*.swp
+
+# Mac
+.DS_Store
+
+# binary file
+*.out
