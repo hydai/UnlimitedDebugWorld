@@ -14,3 +14,4 @@ void Jack::Saysomething()
 {
     std::cout<<"I am Jack!\n";
 }
+

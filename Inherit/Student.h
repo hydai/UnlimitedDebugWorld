@@ -1,16 +1,11 @@
 #include "Human.h"
 
-// In following class, I make a class, Student, for example.
-// Student inherits the Human class, so Student can get all the function
-// in the class Human
 class Student : public Human {
     public:
     // DATA AREA
         // There also are the same data like class Human, but you can add 
-        // more if you want. Through, in my opinion, I prefer writing these
-        // data define again
-        int age, studentID;
-        char *name;
+        // more data if you want. 
+        int studentID;
         
     // FUNCTION AREA
     /* There are constructors in class Human.

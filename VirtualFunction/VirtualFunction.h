@@ -22,3 +22,4 @@ void Call(Student & person)
 {
     person.Saysomething();
 }
+
