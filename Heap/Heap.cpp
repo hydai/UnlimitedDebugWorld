@@ -57,6 +57,8 @@ void Heap<T>::Push(T input)
         T *tmp_heap = new T[max_capacity*2+1];
         std::memcpy(tmp_heap, heap, (max_capacity+1)*sizeof(T));
         max_capacity *= 2;
+        delete heap;
+        heap = tmp_heap;
     }
     int current = ++size;
     if (isMaxHeap) {

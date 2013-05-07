@@ -6,11 +6,11 @@ class Heap
     public:
         /****************************************************************************
          * Constructor:
-         *      Default capacity is 100, and it's max heap.
+         *      Default capacity is 10, and it's max heap.
          *      If the capacity of input is negative, then by default the capacity
-         *      would be 100.
+         *      would be 10.
          ****************************************************************************/
-        Heap(int capacity = 100, bool isMax = true);
+        Heap(int capacity = 10, bool isMax = true);
         /****************************************************************************
          * Destructor:
          *      Free the memory allocation.
