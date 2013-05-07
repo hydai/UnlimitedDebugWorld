@@ -1,7 +1,7 @@
 template <class T>
 Heap<T>::Heap(int capacity, bool isMax) : max_capacity(capacity), isMaxHeap(isMax)
 {
-    heap = new T[max_capacity];
+    heap = new T[max_capacity+1];
     size = 0;
 }
 
@@ -14,6 +14,10 @@ Heap<T>::~Heap()
 template <class T>
 void Heap<T>::Pop()
 {
+    if (size == 0) {
+        return;
+    }
+
     T Last = heap[size--];
     int parent = 1, child = 2;
     if (isMaxHeap) {
@@ -49,6 +53,11 @@ void Heap<T>::Pop()
 template <class T>
 void Heap<T>::Push(T input)
 {
+    if (size == max_capacity) {
+        T *tmp_heap = new T[max_capacity*2+1];
+        std::memcpy(tmp_heap, heap, (max_capacity+1)*sizeof(T));
+        max_capacity *= 2;
+    }
     int current = ++size;
     if (isMaxHeap) {
         while (current!=1 && heap[current/2]<input) {

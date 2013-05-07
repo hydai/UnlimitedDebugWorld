@@ -1,3 +1,5 @@
+#include <cstring> // use the memcpy()
+
 template <class T>
 class Heap
 {
