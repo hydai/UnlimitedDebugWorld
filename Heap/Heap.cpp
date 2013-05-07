@@ -47,7 +47,7 @@ void Heap<T>::Pop()
 }
 
 template <class T>
-void Heap<T>::Insert(T input)
+void Heap<T>::Push(T input)
 {
     int current = ++size;
     if (isMaxHeap) {

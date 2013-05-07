@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     std::printf("Test MaxHeap\n");
     Heap <int> MaxHeap(50, isMaxHeap);
     for (int i = 0; i < 30; i++) {
-        MaxHeap.Insert(i*2+3);
+        MaxHeap.Push(i*2+3);
     }
     std::printf("Top = %d\n", MaxHeap.Top());
     for (int i = 0; i < 5; i++) {
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     std::printf("Test MinHeap\n");
     Heap <int> MinHeap(50, isMinHeap);
     for (int i = 0; i < 30; i++) {
-        MinHeap.Insert(i*2+3);
+        MinHeap.Push(i*2+3);
     }
     std::printf("Top = %d\n", MinHeap.Top());
     for (int i = 0; i < 5; i++) {
