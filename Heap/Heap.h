@@ -4,8 +4,8 @@ class Heap
     public:
         Heap(int capacity = 100, bool isMax = true);
         ~Heap();
-        T Pop();
-        void Insert(T&);
+        void Pop();
+        void Insert(T);
         T Top();
     private:
         T* heap;

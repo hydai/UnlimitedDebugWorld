@@ -12,9 +12,8 @@ Heap<T>::~Heap()
 }
 
 template <class T>
-T Heap<T>::Pop()
+void Heap<T>::Pop()
 {
-    T value = heap[1];
     T Last = heap[size--];
     int parent = 1, child = 2;
     if (isMaxHeap) {
@@ -30,7 +29,6 @@ T Heap<T>::Pop()
             child *= 2;
         }
         heap[parent] = Last;
-        return value;
     }
     else {
         while (child <= size) {
@@ -45,12 +43,11 @@ T Heap<T>::Pop()
             child *= 2;
         }
         heap[parent] = Last;
-        return value;
     }
 }
 
 template <class T>
-void Heap<T>::Insert(T& input)
+void Heap<T>::Insert(T input)
 {
     int current = ++size;
     if (isMaxHeap) {
