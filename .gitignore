@@ -6,3 +6,6 @@
 
 # binary file
 *.out
+
+# tags file
+tags
